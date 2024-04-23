@@ -13,7 +13,6 @@ const actividad_routes_1 = __importDefault(require("./routes/actividad.routes"))
 const recurso_routes_1 = __importDefault(require("./routes/recurso.routes"));
 const area_routes_1 = __importDefault(require("./routes/area.routes"));
 const empresa_routes_1 = __importDefault(require("./routes/empresa.routes"));
-const hola_routes_1 = __importDefault(require("./routes/hola.routes"));
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -28,7 +27,6 @@ class Server {
         this.app.use(express_1.default.urlencoded({ extended: false }));
     }
     routes() {
-        this.app.use('/api/hola', hola_routes_1.default);
         this.app.use('/api/user', user_routes_1.default);
         this.app.use('/api/proyecto', proyecto_routes_1.default);
         this.app.use('/api/nota', nota_routes_1.default);
