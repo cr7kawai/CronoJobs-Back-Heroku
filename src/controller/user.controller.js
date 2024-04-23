@@ -302,7 +302,7 @@ class UserController {
                         fk_empresa: user.fk_empresa,
                         fk_suscripcion: user.fk_suscripcion
                     };
-                    const token = jsonwebtoken_1.default.sign(payload, 'oxIJjs8XYPjNk1hXsaeoybsVU9tx90byhpU6FSa90--6iWM45UlsDkFG5X9q4Rs3', { expiresIn: '12h' });
+                    const token = jsonwebtoken_1.default.sign(payload, 'oxIJjs8XYPjNk1hXsaeoybsVU9tx90byhpU6FSa90--6iWM45UlsDkFG5X9q4Rs3', { expiresIn: '60s' });
                     const transporter = nodemailer.createTransport({
                         service: "Gmail",
                         auth: {
