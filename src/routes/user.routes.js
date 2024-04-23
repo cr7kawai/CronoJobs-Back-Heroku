@@ -20,7 +20,7 @@ class UserRoutes {
         this.router.get('/credenciales/:id_user', auth_middleware_1.verifyToken, user_controller_1.default.obtenerCredenciales);
         this.router.get('/area/:id_area/:id_empresa', auth_middleware_1.verifyToken, user_controller_1.default.obtenerUsuariosArea);
         this.router.post('/', user_controller_1.default.registrarUsuario);
-        this.router.put('/:id_user', auth_middleware_1.verifyToken, user_controller_1.default.modificarUsuario);
+        this.router.put('/:id_user', user_controller_1.default.modificarUsuario);
         this.router.delete('/:id_user', auth_middleware_1.verifyToken, user_controller_1.default.eliminarUsuario);
         this.router.get('/password/:email', user_controller_1.default.enviarEmailConfirmacion);
         this.router.get('/obtener/email/:email', user_controller_1.default.obtenerUsuarioEmail);
